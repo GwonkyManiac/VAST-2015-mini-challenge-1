@@ -18,7 +18,7 @@ def GetGroups(df):
                                'numberEveryone','numberShows','numberInfo','sizeOfGroup', 'HowCommon'])
     group = 0
     for centroid in centroids:
-        groups = groups._append( {"id": group,
+        groups = groups.append( {"id": group,
                     "timeSpentInPark":round(centroid[0]),
                     "daysAtPark": round(centroid[1],2),
                     "numberCheckin": round(centroid[2],1),
@@ -36,5 +36,5 @@ def GetGroups(df):
 
 groups = GetGroups(df_goups)
 
-print(groups.head())
+groups.head()
 
